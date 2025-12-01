@@ -1,6 +1,6 @@
 export function AboutSection() {
   return (
-    <section id="sobre" className="border-b bg-background">
+    <section id="sobre" className="border-b">
       <div className="container mx-auto py-16 md:py-24 space-y-6">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
           Sobre a Thera

@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thera Lab · Portfólio de Engenharia de Software (UEMA)
 
-## Getting Started
+Portfólio do **Laboratório de Engenharia de Software Thera (UEMA)**, desenvolvido em **Next.js 16** com **App Router**, **Tailwind CSS** e **componentes Shadcn UI**, organizado segundo **Atomic Design**.
 
-First, run the development server:
+O objetivo deste projeto é:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Apresentar o laboratório Thera (quem somos, o que fazemos, visão de futuro).
+- Exibir projetos desenvolvidos ou em desenvolvimento.
+- Facilitar contato com possíveis parceiros e demandas internas da UEMA.
+- Servir como base para evoluções futuras (mais páginas, blog, documentação técnica, etc.).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧠 Visão geral da arquitetura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tecnologias principais:
 
-## Learn More
+- **Next.js 16 (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Shadcn UI** (componentes de interface)
+- **Lucide Icons** (ícones)
+- **Atomic Design** para organização de componentes
+- **Design tokens** via classes utilitárias do Tailwind
+- Organização em:
+  - `app/` → páginas e layout
+  - `components/` → UI compartilhada (atoms, molecules, organisms)
+  - `data/` → dados estáticos (ex.: lista de projetos)
+  - `lib/` → utilitários
+  - `hooks/` → hooks customizados (quando forem adicionados)
+  - `public/` → assets estáticos (SVGs, imagens, etc.)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Estrutura de pastas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Estrutura geral do projeto (resumida):
 
-## Deploy on Vercel
+```txt
+thera-portfolio/
+  app/
+    globals.css        # Estilos globais (Tailwind + ajustes gerais)
+    layout.tsx         # Layout raiz: HTML, <body>, SiteHeader e <main>
+    page.tsx           # Página inicial (Home): Hero + Sobre + Projetos + Contato
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  components/
+    atoms/             # Componentes atômicos (menores, básicos)
+      logo.tsx
+      nav-link.tsx
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    molecules/         # Combinação de atoms (blocos reutilizáveis)
+      main-nav.tsx     # Navegação principal (desktop)
+      project-card.tsx # Card para exibir projetos
+
+    organisms/         # Seções completas da página (blocos maiores)
+      site-header.tsx      # Cabeçalho fixo com logo, navegação e CTA
+      mobile-nav.tsx       # Menu mobile simples (abre/fecha)
+      hero-section.tsx     # Hero da página inicial
+      about-section.tsx    # Seção "Sobre a Thera"
+      projects-section.tsx # Seção "Projetos"
+      contact-section.tsx  # Seção "Contato"
+
+    ui/                # Componentes base da Shadcn UI
+      button.tsx
+      badge.tsx
+      card.tsx
+      input.tsx
+      label.tsx
+      navigation-menu.tsx
+      textarea.tsx
+      ... (outros gerados pelo shadcn)
+
+  data/
+    projects.ts        # Lista tipada de projetos (name, description, area, status etc.)
+
+  hooks/
+    (vazio por enquanto – reservado para hooks customizados)
+
+  lib/
+    utils.ts           # Função utilitária `cn` para combinar classes (clsx + tailwind-merge)
+
+  public/
+    file.svg
+    globe.svg
+    next.svg
+    vercel.svg
+    window.svg         # Ícones padrão, podem ser trocados por assets da Thera
+
+  components.json      # Configuração do shadcn (aliases, diretório dos componentes)
+  tsconfig.json        # Configuração TypeScript (paths, baseUrl etc.)
+  next.config.ts       # Configuração Next.js
+  package.json         # Dependências, scripts NPM
+  postcss.config.mjs   # Configuração PostCSS
+  eslint.config.mjs    # Configuração ESLint
+  tailwind.config.*    # (se existir) Configuração Tailwind

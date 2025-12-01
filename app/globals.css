@@ -43,80 +43,195 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* ---------- Paleta base + sistema de espaçamentos ---------- */
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Paleta Thera */
+  --thera-purple: #9747ff;
+  --thera-blue: #006fd6;
+  --thera-dark: #111118;
+  --thera-light: #f4f4f5;
+
+  /* cores "oficiais" do tema */
+  --background: var(--thera-dark);
+  --foreground: #f9fafb;
+  --card: #0f172a;
+  --card-foreground: #f9fafb;
+  --popover: #020617;
+  --popover-foreground: #f9fafb;
+  --primary: var(--thera-purple);
+  --primary-foreground: #f9fafb;
+  --secondary: #020617;
+  --secondary-foreground: #e5e7eb;
+  --muted: #020617;
+  --muted-foreground: #9ca3af;
+  --accent: #020617;
+  --accent-foreground: #e5e7eb;
+  --destructive: #ef4444;
+  --border: rgba(148, 163, 184, 0.4);
+  --input: rgba(15, 23, 42, 0.9);
+  --ring: var(--thera-purple);
+  --chart-1: var(--thera-purple);
+  --chart-2: var(--thera-blue);
+  --chart-3: #fb7185;
+  --chart-4: #a855f7;
+  --chart-5: #f97316;
+  --sidebar: #020617;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: var(--thera-purple);
+  --sidebar-primary-foreground: #f9fafb;
+  --sidebar-accent: #020617;
+  --sidebar-accent-foreground: #f9fafb;
+  --sidebar-border: rgba(148, 163, 184, 0.35);
+  --sidebar-ring: var(--thera-purple);
+
+  /* Sistema de espaçamentos globais
+     1rem ≈ 16px, então:
+     - 3rem ≈ 48px
+     - 3.125rem ≈ 50px
+     - 3.5rem ≈ 56px
+  */
+
+  --page-padding-y-mobile: 4.5rem;     /* ~72px top/bottom do main em mobile */
+  --page-padding-y-desktop: 5.5rem;    /* ~88px em desktop */
+
+  --section-padding-y-mobile: 3rem;    /* ~48px dentro de cada section */
+  --section-padding-y-desktop: 3.5rem; /* ~56px dentro de cada section */
+
+  --section-gap-mobile: 3.125rem;      /* ~50px ENTRE sections em mobile */
+  --section-gap-desktop: 3.5rem;       /* ~56px ENTRE sections em desktop */
+
+  /* compensação do header fixo (altura ~4rem + folga) */
+  --scroll-offset-mobile: 5rem;
+  --scroll-offset-desktop: 6rem;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
+/* ---------- Base + spacing aplicado via CSS ---------- */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--thera-dark);
+    color: #f9fafb;
+  }
+
+  main {
+    padding-top: var(--page-padding-y-mobile);
+    padding-bottom: var(--page-padding-y-mobile);
+  }
+
+  @media (min-width: 768px) {
+    main {
+      padding-top: var(--page-padding-y-desktop);
+      padding-bottom: var(--page-padding-y-desktop);
+    }
+  }
+
+  /* padding interno das sections + offset das âncoras */
+  main > section {
+    padding-top: var(--section-padding-y-mobile) !important;
+    padding-bottom: var(--section-padding-y-mobile) !important;
+    scroll-margin-top: var(--scroll-offset-mobile);
+  }
+
+  @media (min-width: 768px) {
+    main > section {
+      padding-top: var(--section-padding-y-desktop) !important;
+      padding-bottom: var(--section-padding-y-desktop) !important;
+      scroll-margin-top: var(--scroll-offset-desktop);
+    }
+  }
+
+  /* espaçamento ENTRE sections */
+  main > section + section {
+    margin-top: var(--section-gap-mobile);
+  }
+
+  @media (min-width: 768px) {
+    main > section + section {
+      margin-top: var(--section-gap-desktop);
+    }
+  }
+}
+
+/* ---------- Layout Thera (container + background) ---------- */
+
+.main-shell {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Background com roxo/azul da Thera */
+.page-bg {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at top left,
+      color-mix(in srgb, var(--thera-purple) 35%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      color-mix(in srgb, var(--thera-blue) 35%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(circle at top right, rgba(15, 23, 42, 0.85), transparent 65%),
+    var(--thera-dark);
+}
+
+.page-bg::before,
+.page-bg::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.page-bg::before {
+  background: radial-gradient(circle at 10% 0%, var(--thera-purple), transparent 60%);
+  top: -120px;
+  left: -80px;
+  animation: float-a 18s ease-in-out infinite alternate;
+}
+
+.page-bg::after {
+  background: radial-gradient(circle at 90% 100%, var(--thera-blue), transparent 55%);
+  bottom: -140px;
+  right: -60px;
+  animation: float-b 22s ease-in-out infinite alternate;
+}
+
+@keyframes float-a {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.12;
+  }
+  100% {
+    transform: translate3d(40px, 30px, 0);
+    opacity: 0.24;
+  }
+}
+
+@keyframes float-b {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.12;
+  }
+  100% {
+    transform: translate3d(-50px, -20px, 0);
+    opacity: 0.22;
   }
 }

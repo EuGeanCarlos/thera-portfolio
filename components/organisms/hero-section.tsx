@@ -1,57 +1,41 @@
-import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
-
 export function HeroSection() {
   return (
-    <section className="border-b bg-gradient-to-b from-background to-background/80">
-      <div className="container mx-auto flex flex-col gap-8 py-16 md:py-24 lg:py-32">
-        <div className="max-w-2xl space-y-6">
-          <p className="text-sm font-medium text-primary/80">
-            Laboratório de Engenharia de Software · UEMA
-          </p>
+    <section className="w-full py-20">
+      <div className="main-shell grid gap-10 md:grid-cols-2 items-center">
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            Software sob medida para negócios
-            <span className="block text-primary">que precisam evoluir.</span>
+        <div className="space-y-6">
+          <span className="text-thera-300 text-sm tracking-wide">
+            Laboratório de Engenharia de Software · UEMA
+          </span>
+
+          <h1 className="text-4xl md:text-5xl font-bold text-thera-50 leading-tight">
+            Software sob medida
+            <br />
+            <span className="text-thera-300">
+              para negócios que precisam evoluir.
+            </span>
           </h1>
 
-          <p className="text-base md:text-lg text-muted-foreground">
-            A Thera transforma problemas computáveis em soluções digitais
-            funcionais, robustas e acessíveis. Entregamos rápido e evoluímos
-            junto com o cliente, sempre com foco na lógica do seu negócio.
+          <p className="text-base text-thera-300 max-w-xl">
+            A Thera transforma problemas computáveis em soluções digitais funcionais,
+            robustas e acessíveis. Entregamos rápido e evoluímos junto com o cliente,
+            sempre com foco na lógica do seu negócio.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Button size="lg" asChild>
-              <a href="#projetos" className="flex items-center gap-2">
-                Ver projetos
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </Button>
+          <div className="flex gap-4">
+            <button className="px-6 py-3 rounded-lg bg-thera-500 text-slate-950 font-medium hover:bg-thera-400 transition">
+              Ver projetos
+            </button>
 
-            <Button variant="outline" size="lg" asChild>
-              <a href="#contato">Conversar sobre um projeto</a>
-            </Button>
+            <button className="px-6 py-3 rounded-lg border border-thera-500/60 text-thera-50 hover:bg-thera-900/60 transition">
+              Conversar sobre um projeto
+            </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 text-sm text-muted-foreground md:grid-cols-3">
-          <div className="rounded-lg border bg-background/80 p-4">
-            <p className="font-semibold text-foreground">Entrega rápida</p>
-            <p>Primeira versão funcional em pouco tempo, para validar cedo.</p>
-          </div>
-          <div className="rounded-lg border bg-background/80 p-4">
-            <p className="font-semibold text-foreground">Refinamento contínuo</p>
-            <p>Evoluímos o sistema de forma iterativa, junto com o cliente.</p>
-          </div>
-          <div className="rounded-lg border bg-background/80 p-4">
-            <p className="font-semibold text-foreground">Preço acessível</p>
-            <p>
-              Estrutura universitária, valores competitivos e foco em resultado.
-            </p>
-          </div>
-        </div>
+        {/* imagem ou ilustração opcional */}
+        <div className="h-64 bg-gradient-to-br from-thera-500/10 to-thera-300/5 rounded-xl shadow-soft" />
       </div>
     </section>
-  );
+  )
 }
