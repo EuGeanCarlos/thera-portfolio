@@ -171,6 +171,8 @@ thera-portfolio/
   eslint.config.mjs    # Configuração ESLint
   tailwind.config.*    # (se existir) Configuração Tailwind
 
+```
+
 ## Build estático
 
 `npm run build` gera `out/`. No Pages, `NEXT_PUBLIC_BASE_PATH=/thera-portfolio` preserva os caminhos. O inventário de arquivos públicos é regenerado a cada build; imagens ausentes não geram requisições inválidas.
