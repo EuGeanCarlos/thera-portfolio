@@ -1,3 +1,80 @@
+# Thera Lab — portfólio institucional
+
+Protótipo institucional Next.js do laboratório Thera/UEMA, com seções de projetos, equipe, perguntas frequentes e contato. O formulário de contato é apenas visual e não envia mensagens.
+
+## Tecnologias
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- Radix UI
+
+## Funcionalidades e utilização
+
+Navegue pelas seções e cartões. O envio de contato e imagens de equipe ainda exigem implementação/conteúdo original.
+
+## Como executar
+
+```bash
+git clone https://github.com/EuGeanCarlos/thera-portfolio.git
+cd thera-portfolio
+npm ci
+npm run dev
+```
+
+Use Node.js 22.12 ou superior e o lockfile versionado. Para compilar, execute npm run build. Limitações descritas acima podem impedir o build.
+
+## Demonstração e publicação
+
+Execução local. Nenhuma demonstração nova foi confirmada nesta etapa.
+
+## Estrutura versionada
+
+```text
+.gitignore
+README.md
+app/favicon.ico
+app/globals.css
+app/layout.tsx
+app/page.tsx
+components.json
+components/atoms/.gitkeep
+components/atoms/logo.tsx
+components/atoms/nav-link.tsx
+components/atoms/reveal-on-scroll.tsx
+components/molecules/.gitkeep
+components/molecules/main-nav.tsx
+components/molecules/project-card.tsx
+components/organisms/.gitkeep
+components/organisms/about-section.tsx
+components/organisms/header.tsx
+components/organisms/hero-section.tsx
+components/organisms/mobile-nav.tsx
+components/organisms/site-footer.tsx
+components/organisms/site-header.tsx
+components/ui/.gitkeep
+…
+```
+
+## Status
+
+Protótipo / projeto de estudo em desenvolvimento. A descrição acima distingue o que está implementado das dependências ou etapas pendentes.
+
+## Autor e créditos
+
+**Gean Carlos** — estudante de Engenharia de Computação, UEMA.
+
+[GitHub](https://github.com/EuGeanCarlos)
+
+Licenças, autoria compartilhada e atribuições existentes no código e nos materiais originais permanecem aplicáveis.
+
+---
+
+## Documentação original e contexto
+
+O material original a seguir preserva contexto, créditos e planejamento. Para execução e limitações atuais, considere as seções de auditoria acima.
+
 # Thera Lab · Portfólio de Engenharia de Software (UEMA)
 
 Portfólio do **Laboratório de Engenharia de Software Thera (UEMA)**, desenvolvido em **Next.js 16** com **App Router**, **Tailwind CSS** e **componentes Shadcn UI**, organizado segundo **Atomic Design**.

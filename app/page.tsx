@@ -1,11 +1,7 @@
 
-import * as projectsData from "../data/projects"
+import { projects } from "../data/projects"
 import { RevealOnScroll } from "../components/atoms/reveal-on-scroll"
 
-const projects: any[] =
-  (projectsData as any).projects ||
-  (projectsData as any).default ||
-  []
 
 type TeamMember = {
   name: string
