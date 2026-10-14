@@ -7,7 +7,7 @@ import { SiteFooter } from "../components/organisms/site-footer"
 
 export const metadata: Metadata = {
   // troque a URL pelo domínio real quando tiver
-  metadataBase: new URL("https://thera-labs.example.com"),
+  metadataBase: new URL("https://eugeancarlos.github.io/thera-portfolio/"),
   title: {
     default: "Thera Labs · Software House da UEMA",
     template: "%s · Thera Labs",
@@ -18,22 +18,15 @@ export const metadata: Metadata = {
     title: "Thera Labs · Software House da UEMA",
     description:
       "Soluções digitais, automações e plataformas desenvolvidas pelo Thera Labs em parceria com a Universidade Estadual do Maranhão.",
-    url: "https://thera-labs.example.com",
+    url: "https://eugeancarlos.github.io/thera-portfolio/",
     siteName: "Thera Labs",
-    images: [
-      {
-        url: "/og/thera-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Interface do Thera Labs e projetos de software",
-      },
-    ],
+    images: [],
     locale: "pt_BR",
     type: "website",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon.ico`,
+    shortcut: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon.ico`,
   },
 }
 

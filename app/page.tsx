@@ -1,3 +1,4 @@
+import { publicAsset } from "../lib/public-asset"
 
 import { projects } from "../data/projects"
 import { RevealOnScroll } from "../components/atoms/reveal-on-scroll"
@@ -17,21 +18,21 @@ const team: TeamMember[] = [
     role: "Coordenação",
     area: "Gestão de projetos e relacionamento institucional",
     bio: "Garante alinhamento com a UEMA, definição de prioridades e acompanhamento das entregas com foco em impacto real.",
-    photo: "/team/coordenacao.png",
+    photo: publicAsset("/team/coordenacao.png"),
   },
   {
     name: "Squad de Desenvolvimento",
     role: "Dev Backend & Frontend",
     area: "Sistemas web, APIs e integrações",
     bio: "Transforma requisitos em código limpo, escalável e testado, cuidando desde a arquitetura até o deploy.",
-    photo: "/team/dev-squad.png",
+    photo: publicAsset("/team/dev-squad.png"),
   },
   {
     name: "Squad de Produto & UX",
     role: "Produto & Experiência",
     area: "Descoberta, fluxos e interface",
     bio: "Traduz necessidades de usuários em jornadas claras, protótipos navegáveis e documentação funcional.",
-    photo: "/team/produto-ux.png",
+    photo: publicAsset("/team/produto-ux.png"),
   },
 ]
 

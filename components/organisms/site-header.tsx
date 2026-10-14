@@ -4,6 +4,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import { publicAsset } from "../../lib/public-asset"
 
 const NAV_ITEMS = [
   { href: "#projetos", label: "Projetos" },
@@ -38,13 +39,13 @@ export function SiteHeader() {
         <Link href="/" className="flex items-center gap-2 shrink-0">
           {/* A logo vem de /public/logo.png (ou ajusta o src abaixo) */}
           <div className="relative h-8 w-8 rounded-md overflow-hidden bg-black/60 border border-white/15">
-            <Image
-              src="/logo.png"
+            {publicAsset("/logo.png") && <Image
+              src={publicAsset("/logo.png")!}
               alt="Thera Labs"
               fill
               sizes="32px"
               className="object-contain p-1.5"
-            />
+            />}
           </div>
 
           <div className="flex flex-col leading-tight">

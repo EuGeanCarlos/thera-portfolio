@@ -12,7 +12,7 @@ Protótipo institucional Next.js do laboratório Thera/UEMA, com seções de pro
 
 ## Funcionalidades e utilização
 
-Navegue pelas seções e cartões. O envio de contato e imagens de equipe ainda exigem implementação/conteúdo original.
+Navegue pelas seções e cartões. O envio de contato ainda exige implementação. Imagens opcionais ausentes usam a apresentação alternativa já existente; para disponibilizá-las, adicione os arquivos originais em public/ e execute o build.
 
 ## Como executar
 
@@ -170,3 +170,7 @@ thera-portfolio/
   postcss.config.mjs   # Configuração PostCSS
   eslint.config.mjs    # Configuração ESLint
   tailwind.config.*    # (se existir) Configuração Tailwind
+
+## Build estático
+
+`npm run build` gera `out/`. No Pages, `NEXT_PUBLIC_BASE_PATH=/thera-portfolio` preserva os caminhos. O inventário de arquivos públicos é regenerado a cada build; imagens ausentes não geram requisições inválidas.
