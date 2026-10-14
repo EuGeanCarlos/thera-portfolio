@@ -27,7 +27,7 @@ Use Node.js 22.12 ou superior e o lockfile versionado. Para compilar, execute np
 
 ## Demonstração e publicação
 
-Execução local. Nenhuma demonstração nova foi confirmada nesta etapa.
+[Acessar demonstração verificada](https://eugeancarlos.github.io/thera-portfolio/)
 
 ## Estrutura versionada
 
@@ -174,3 +174,7 @@ thera-portfolio/
 ## Build estático
 
 `npm run build` gera `out/`. No Pages, `NEXT_PUBLIC_BASE_PATH=/thera-portfolio` preserva os caminhos. O inventário de arquivos públicos é regenerado a cada build; imagens ausentes não geram requisições inválidas.
+
+## Validação desta auditoria — 14/10/2026
+
+PUBLICADO: [workflow confirmado](https://github.com/EuGeanCarlos/thera-portfolio/actions/runs/38610373975), HTTP 200, conteúdo correspondente ao projeto e 13 recursos locais verificados. Exportação estática local e workflow Linux aprovados. Recursos opcionais ausentes usam as alternativas existentes; formulário de contato não envia mensagens.
